@@ -78,19 +78,19 @@ export function Install() {
         <Prose>
           Install Plot UI and its animation dependency via npm:
         </Prose>
-        <Snippet copyText="npm install @plot/ui motion">
+        <Snippet copyText="npm install @uiplot/ui motion">
           <ShellLine />
         </Snippet>
 
         <Prose style={{ marginTop: 4 }}>Or just tell your agent to set it up:</Prose>
         <Snippet
-          copyText={`Install Plot UI (npm install @plot/ui motion). Wrap your root layout's children in <ToastProvider /> and import @plot/ui/tokens.css at the top of app/layout.tsx.`}
+          copyText={`Install Plot UI (npm install @uiplot/ui motion). Wrap your root layout's children in <ToastProvider /> and import @uiplot/ui/tokens.css at the top of app/layout.tsx.`}
           tone="prose"
         >
           <span style={{ color: "var(--ub-fg-soft)" }}>
-            Install Plot UI (<C>npm install @plot/ui motion</C>). Wrap your root
+            Install Plot UI (<C>npm install @uiplot/ui motion</C>). Wrap your root
             layout&rsquo;s children in <C>&lt;ToastProvider /&gt;</C> and import{" "}
-            <C>@plot/ui/tokens.css</C> at the top of <C>app/layout.tsx</C>.
+            <C>@uiplot/ui/tokens.css</C> at the top of <C>app/layout.tsx</C>.
           </span>
         </Snippet>
 
@@ -105,7 +105,7 @@ export function Install() {
 
         <Prose style={{ marginTop: 4 }}>
           That&rsquo;s it. Now you can use any component from{" "}
-          <InlineCode>@plot/ui</InlineCode> — like{" "}
+          <InlineCode>@uiplot/ui</InlineCode> — like{" "}
           <InlineCode>useToast</InlineCode> — in any client component.
         </Prose>
       </div>
@@ -257,15 +257,15 @@ function ShellLine() {
       <span> </span>
       <Tk c="success">install</Tk>
       <span> </span>
-      <Tk c="fg">@plot/ui</Tk>
+      <Tk c="fg">@uiplot/ui</Tk>
       <span> </span>
       <Tk c="fg">motion</Tk>
     </>
   );
 }
 
-const LAYOUT_SOURCE = `import { ToastProvider } from "@plot/ui";
-import "@plot/ui/tokens.css";
+const LAYOUT_SOURCE = `import { ToastProvider } from "@uiplot/ui";
+import "@uiplot/ui/tokens.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -288,12 +288,12 @@ function LayoutTsx() {
       <span> </span>
       <Tk c="accent">from</Tk>
       <span> </span>
-      <Tk c="success">&quot;@plot/ui&quot;</Tk>
+      <Tk c="success">&quot;@uiplot/ui&quot;</Tk>
       <Tk c="muted">;</Tk>
       {"\n"}
       <Tk c="accent">import</Tk>
       <span> </span>
-      <Tk c="success">&quot;@plot/ui/tokens.css&quot;</Tk>
+      <Tk c="success">&quot;@uiplot/ui/tokens.css&quot;</Tk>
       <Tk c="muted">;</Tk>
       {"\n\n"}
       <Tk c="accent">export default function</Tk>

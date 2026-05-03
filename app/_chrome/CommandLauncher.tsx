@@ -53,8 +53,8 @@ export function CommandLauncher() {
         };
         scrollTo(map[it.id]);
       } else if (it.id === "copy-install") {
-        navigator.clipboard.writeText("npm i @plot/ui");
-        toast.push({ tone: "success", title: "Copied", body: "npm i @plot/ui" });
+        navigator.clipboard.writeText("npm i @uiplot/ui");
+        toast.push({ tone: "success", title: "Copied", body: "npm i @uiplot/ui" });
       } else {
         toast.push({ tone: "neutral", title: it.label, body: `Selected ${it.label}.` });
       }

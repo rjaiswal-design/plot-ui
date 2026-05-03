@@ -7,16 +7,16 @@ Dark editorial UI kit — token-driven primitives for internal Next.js tools.
 ## Install
 
 ```bash
-npm install @plot/ui motion
+npm install @uiplot/ui motion
 ```
 
 ```tsx
 // app/layout.tsx
-import "@plot/ui/tokens.css";
+import "@uiplot/ui/tokens.css";
 ```
 
 ```tsx
-import { Button, Card, Command, BlurReveal } from "@plot/ui";
+import { Button, Card, Command, BlurReveal } from "@uiplot/ui";
 ```
 
 ## What's inside

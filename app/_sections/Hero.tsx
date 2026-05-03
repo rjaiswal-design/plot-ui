@@ -13,7 +13,7 @@ export function Hero() {
   };
 
   const copyInstallCmd = () => {
-    const cmd = "npm i @plot/ui";
+    const cmd = "npm i @uiplot/ui";
     navigator.clipboard
       .writeText(cmd)
       .then(() =>
@@ -105,7 +105,7 @@ export function Hero() {
           Get started
         </Button>
         <Button variant="ghost" size="lg" onClick={copyInstallCmd}>
-          npm i @plot/ui →
+          npm i @uiplot/ui →
         </Button>
       </div>
 
