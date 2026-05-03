@@ -1,7 +1,29 @@
+"use client";
 import { Button } from "../../src/components/primitives/Button";
 import { LiveRipple } from "../../src/components/flavored/LiveRipple";
+import { useToast } from "../../src/components/primitives/Toast";
 
 export function Hero() {
+  const toast = useToast();
+
+  const scrollToInstall = () => {
+    document
+      .getElementById("install")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const copyInstallCmd = () => {
+    const cmd = "npm i @plot/ui";
+    navigator.clipboard
+      .writeText(cmd)
+      .then(() =>
+        toast.push({ tone: "success", title: "Copied", body: cmd }),
+      )
+      .catch(() =>
+        toast.push({ tone: "neutral", title: "Copy failed", body: cmd }),
+      );
+  };
+
   return (
     <section
       id="hero"
@@ -79,10 +101,10 @@ export function Hero() {
           marginTop: 4,
         }}
       >
-        <Button variant="primary" size="lg">
+        <Button variant="primary" size="lg" onClick={scrollToInstall}>
           Get started
         </Button>
-        <Button variant="ghost" size="lg">
+        <Button variant="ghost" size="lg" onClick={copyInstallCmd}>
           npm i @plot/ui →
         </Button>
       </div>
