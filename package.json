@@ -3,28 +3,55 @@
   "version": "0.0.1",
   "private": false,
   "description": "Plot UI kit — dark editorial design system for internal tools.",
+  "license": "MIT",
+  "author": "Rahul Jaiswal",
+  "homepage": "https://plot-ui.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjaiswal-design/plot-ui.git"
+  },
+  "keywords": [
+    "ui-kit",
+    "react",
+    "design-system",
+    "components",
+    "nextjs",
+    "tailwind"
+  ],
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./tokens.css": "./src/tokens/tokens.css",
-    "./components/*": "./src/components/*"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./components/*": {
+      "types": "./dist/components/*.d.ts",
+      "import": "./dist/components/*.js"
+    }
   },
   "files": [
-    "src"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "dev": "next dev --port 3200",
-    "build": "next build",
-    "start": "next start --port 3200",
-    "lint": "eslint"
+    "site:build": "next build",
+    "site:start": "next start --port 3200",
+    "build": "tsup && cp src/tokens/tokens.css dist/tokens.css",
+    "lint": "eslint",
+    "prepublishOnly": "npm run build"
   },
-  "dependencies": {
-    "motion": "^12.38.0",
-    "next": "16.2.1",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+  "peerDependencies": {
+    "motion": "^12.0.0",
+    "react": ">=18"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -33,7 +60,12 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "motion": "^12.38.0",
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "tailwindcss": "^4",
+    "tsup": "^8.5.1",
     "typescript": "^5"
   }
 }
