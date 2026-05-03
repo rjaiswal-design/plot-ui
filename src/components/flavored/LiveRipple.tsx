@@ -11,8 +11,9 @@ export function LiveRipple({ label = "LIVE", color = "var(--ub-success)" }: Live
         alignItems: "center",
         gap: 8,
         padding: "3px 9px 3px 6px",
-        background: "rgba(74,222,128,0.06)",
-        border: "1px solid #2d4a2d",
+        color,
+        background: `color-mix(in srgb, ${color} 8%, transparent)`,
+        border: `1px solid color-mix(in srgb, ${color} 30%, transparent)`,
         borderRadius: 999,
       }}
     >
