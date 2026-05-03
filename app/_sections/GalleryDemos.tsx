@@ -165,7 +165,6 @@ export function GalleryDemos() {
 
       <Cell num="07" name="SWITCH">
         <Switch defaultChecked label="Notifications" />
-        <Switch label="Off" />
       </Cell>
 
       <Cell num="08" name="SLIDER">

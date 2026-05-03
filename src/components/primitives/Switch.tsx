@@ -44,19 +44,23 @@ export function Switch({ checked, defaultChecked, onChange, label, disabled }: S
           background: value ? "var(--ub-accent)" : "var(--ub-surface-hover)",
           border: `1px solid ${value ? "var(--ub-accent)" : "var(--ub-border)"}`,
           position: "relative",
-          transition: "background 0.18s var(--ub-ease-standard)",
+          transition:
+            "background 260ms cubic-bezier(0.32, 0.72, 0, 1), border-color 260ms cubic-bezier(0.32, 0.72, 0, 1)",
         }}
       >
         <span
           style={{
             position: "absolute",
             top: 1,
-            left: value ? 13 : 1,
+            left: 1,
             width: 14,
             height: 14,
             borderRadius: "50%",
             background: value ? "#0e0e0e" : "var(--ub-fg-soft)",
-            transition: "left 0.18s var(--ub-ease-standard)",
+            transform: value ? "translateX(12px)" : "translateX(0)",
+            willChange: "transform",
+            transition:
+              "transform 260ms cubic-bezier(0.32, 0.72, 0, 1), background 220ms cubic-bezier(0.32, 0.72, 0, 1)",
           }}
         />
       </span>
