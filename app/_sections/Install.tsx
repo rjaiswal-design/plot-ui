@@ -76,19 +76,19 @@ export function Install() {
         }}
       >
         <Prose>
-          Install Plot UI and its animation dependency via npm:
+          Install Plot UI via npm:
         </Prose>
-        <Snippet copyText="npm install @uiplot/ui motion">
+        <Snippet copyText="npm i @uiplot/ui">
           <ShellLine />
         </Snippet>
 
         <Prose style={{ marginTop: 4 }}>Or just tell your agent to set it up:</Prose>
         <Snippet
-          copyText={`Install Plot UI (npm install @uiplot/ui motion). Wrap your root layout's children in <ToastProvider /> and import @uiplot/ui/tokens.css at the top of app/layout.tsx.`}
+          copyText={`Install Plot UI (npm i @uiplot/ui). Wrap your root layout's children in <ToastProvider /> and import @uiplot/ui/tokens.css at the top of app/layout.tsx.`}
           tone="prose"
         >
           <span style={{ color: "var(--ub-fg-soft)" }}>
-            Install Plot UI (<C>npm install @uiplot/ui motion</C>). Wrap your root
+            Install Plot UI (<C>npm i @uiplot/ui</C>). Wrap your root
             layout&rsquo;s children in <C>&lt;ToastProvider /&gt;</C> and import{" "}
             <C>@uiplot/ui/tokens.css</C> at the top of <C>app/layout.tsx</C>.
           </span>
@@ -255,11 +255,9 @@ function ShellLine() {
     <>
       <Tk c="accent">npm</Tk>
       <span> </span>
-      <Tk c="success">install</Tk>
+      <Tk c="success">i</Tk>
       <span> </span>
       <Tk c="fg">@uiplot/ui</Tk>
-      <span> </span>
-      <Tk c="fg">motion</Tk>
     </>
   );
 }
