@@ -120,7 +120,7 @@ export function Hero() {
         }}
       >
         {[
-          ["38", "components"],
+          ["47", "components"],
           ["9", "color tokens"],
           ["3", "type families"],
           ["MIT", "license"],
