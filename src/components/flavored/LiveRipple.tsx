@@ -10,10 +10,10 @@ export function LiveRipple({ label = "LIVE", color = "var(--ub-success)" }: Live
         display: "inline-flex",
         alignItems: "center",
         gap: 8,
-        padding: "3px 8px 3px 6px",
+        padding: "3px 9px 3px 6px",
         background: "rgba(74,222,128,0.06)",
         border: "1px solid #2d4a2d",
-        borderRadius: "var(--ub-radius-sm)",
+        borderRadius: 999,
       }}
     >
       <span
